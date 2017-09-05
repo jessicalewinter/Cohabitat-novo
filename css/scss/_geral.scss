@@ -649,10 +649,144 @@ nav ul{
             color: $branco;
         }
     }
-    
-
 }
 
+/*---------------------Planos Detalhados---------------------------*/
+
+#virtual,#compartilhado, #privado{
+     background: $cinza-escuro;
+    padding: 40px;
+    @include device(medium){
+            padding: 20px;
+        }
+    .planos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .planos-img{
+        img{
+            border-radius: 10px;
+        }
+        max-width: 50%;
+        display: inline-block;
+        padding: 100px 0;
+         @include device(small){
+               display: block;
+                 max-width: 100%;
+                 padding: 20px 0;
+            }
+        @include device(medium){
+            display: block;
+            max-width: 100%;
+            padding: 20px 0;
+        }
+        
+    }
+    .planos-sobre{
+        margin-left: 20px;
+        margin-top: 40px;
+        max-width: 40%;
+        display: inline-block;
+        @include device(small){
+               display: block;
+               max-width: 100%;
+               margin: 30px 10px;
+            }
+        @include device(medium){
+            display: block;
+            max-width: 100%;
+            margin: 30px 10px;
+        }
+    }
+    h2{
+        color: $cinza-escuro;
+        margin: 0 auto;
+        text-align: center;
+        
+        &::after{
+            background: $cinza-escuro;
+        }
+    }
+    .top{
+        position: absolute;
+        top:250px;
+        left: 80px;
+        @include device(medium){
+            left: 200px;
+            font-size: 60px;
+        }
+        @include device(small){
+            top: 120px;
+            left: 60px;
+            font-size: 45px;
+        }
+    }
+    p{
+        color: $branco;
+        line-height: 30px;
+        border: 4px solid $verde-escuro;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    
+    ul{
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+    ul li{
+        margin-left: 30px;
+        font-family: $fonte-1;
+        color: $branco;
+        line-height: 32px;
+        font-size: 16px;
+        span{
+            font-family: 'icomoon';
+            color: $verde-escuro;
+            margin-right: 5px;
+        }
+    }
+    .real{
+        font-family: $fonte-1;
+        font-size: 40px;
+        color: $branco;
+        margin: 40px;
+        margin-top: 100px;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: 4px solid $verde-escuro;
+        sup{
+            color: $verde-escuro;
+        }
+    }
+}
+
+#compartilhado{
+   background: $verde-claro;
+    p, ul li{
+        color: $cinza-escuro;
+    }
+    .top{
+        color: $branco;
+        &::after{
+            background: $branco;
+        }
+        top: 270px;
+        left: 50px;
+    }
+}
+#privado{
+    background: $cinza-escuro;
+    .top{
+        color: $branco;
+        left: 100px;
+        top: 270px;
+         &::after{
+            background: $branco;
+             
+        }
+    }
+}
 
 
 
