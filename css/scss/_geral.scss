@@ -63,7 +63,6 @@ img{
     }
 }
 
-
 /*-----------------------Header--------------------*/
 
 .header{
@@ -117,10 +116,8 @@ nav ul{
         @include device(small){
            margin-top: 10px;
             }
-        }
-        
+        }  
     }
-
 }
 
 .logo{
@@ -194,7 +191,7 @@ nav ul{
             padding-left: 20px;
             margin-top: -60px;
         }@include device(small){
-           
+           padding-left:  50px;
             padding-bottom: 20px;
         }
        
@@ -228,6 +225,7 @@ nav ul{
         display: inline-block;
         @include device(small){
             max-width: 100%;
+            
         }
     }
     
@@ -242,6 +240,9 @@ nav ul{
     .btn{
         max-width: 400px;
         margin-bottom: 40px;
+        @include device(small){
+            margin: 0 auto;
+        }
     }
    
 }
@@ -278,6 +279,11 @@ nav ul{
         max-height: 100%;
         margin: 30px;
         align-self:flex-end;
+        @include device(small){
+            margin: 20px -10px;
+            display: block;
+           
+        }
     }
     .subtitulo{
         color: $branco;
@@ -317,6 +323,9 @@ nav ul{
     .btn{
         margin: 20px 50px;
         align-self: baseline;
+        @include device(small){
+            display: block;
+        }
     }
     
     .fig{
@@ -336,6 +345,9 @@ nav ul{
         padding-top: 100px;
         sup{
             color: $verde-escuro;
+        }
+        @include device(small){
+             margin-left: 20px;   
         }
     }
 }
@@ -384,6 +396,10 @@ nav ul{
                 border-color: $cinza-escuro;
                 outline: none;
             }
+            @include device(small){
+                width: 100%;
+                margin: inherit auto;
+            }
             
         }
             -webkit-input-placeholder { /* Chrome */
@@ -414,6 +430,10 @@ nav ul{
                 background: $branco;
                 color: $cinza-escuro;
             }
+            @include device(small){
+                margin: 20px auto;
+                padding: 30px;
+            }
         }
     }
 /*---Formulário PHP----*/
@@ -436,7 +456,6 @@ nav ul{
 #form-erro {
 	color: #f64540;
 }
-
 
 /*-----------------------------Footer---------------------*/
 
@@ -480,7 +499,7 @@ nav ul{
         padding-bottom: 20px;
         @include device(small){
          padding-bottom: 10px;
-     }
+         }
     }
     
     ul li{
@@ -494,7 +513,6 @@ nav ul{
             color: $cinza-escuro;
             transition: .3s all ease;
             &:hover{
-                
                 color: $verde-claro;
                 }
             }
@@ -521,21 +539,16 @@ nav ul{
                 transition: .3s all ease;
                 &:hover{
                     color: $cinza-escuro;
+                    }    
                 }
-                }
-            
-            
         }
     }
-    
 }
 
 .footer-2{
     background: $verde-escuro;
     .container{
-        flex-direction: column;
-       
-        
+        flex-direction: column; 
     }
     p{
        line-height: 30px;
@@ -616,6 +629,9 @@ nav ul{
     .container{
         flex-direction: row;
         justify-content:flex-end;
+        @include device(small){
+         justify-content: center;   
+        }
     }
     .item{
         border-radius: 10px;
@@ -624,6 +640,10 @@ nav ul{
         max-height: 100%;
         margin: 30px;
         align-self:flex-end;
+        @include device(small){
+             align-self: center;
+            margin: 20px auto;
+        }
     }
    
 
@@ -684,9 +704,9 @@ nav ul{
         
     }
     .planos-sobre{
-        margin-left: 20px;
+        margin-left: 10px;
         margin-top: 40px;
-        max-width: 40%;
+        max-width: 45%;
         display: inline-block;
         @include device(small){
                display: block;
@@ -749,8 +769,9 @@ nav ul{
     .real{
         font-family: $fonte-1;
         font-size: 40px;
+        max-width: 100%;
         color: $branco;
-        margin: 40px;
+        margin: 30px;
         margin-top: 100px;
         padding: 10px 20px;
         border-radius: 10px;
@@ -758,6 +779,21 @@ nav ul{
         sup{
             color: $verde-escuro;
         }
+        @include device(small){
+            display: block;
+            font-size: 35px;
+            padding: 10px;
+            line-height: 50px;
+            text-align: center;
+        }
+    }
+    .wrap{
+        display: block;
+        @include device(medium){
+            max-width: 60%;
+        }
+        
+        
     }
 }
 
@@ -773,6 +809,12 @@ nav ul{
         }
         top: 270px;
         left: 50px;
+        
+        @include device(small){
+            top: 70px;
+            left: 20px;
+            font-size: 35px;
+        }
     }
 }
 #privado{
@@ -783,7 +825,21 @@ nav ul{
         top: 270px;
          &::after{
             background: $branco;
-             
+        }
+        
+        @include device(small){
+            top: 70px;
+            left: 20px;
+            font-size: 35px;
+        }
+    }
+}
+#virtual{
+    .top{
+        @include device(small){
+            top: 70px;
+            left: 20px;
+            font-size: 35px;
         }
     }
 }
